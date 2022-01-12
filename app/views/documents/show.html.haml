@@ -1,2 +1,8 @@
+= javascript_include_tag 
+
 %h1= @document.tittle
 %p= @document.content
+
+= link_to "All Documents", documents_path
+= link_to "Fix Doc", edit_document_path(@document)
+= button_to "Delete It", document_path(@document), method: :delete, data: { confirm: "Are you sure?" }
